@@ -11,6 +11,9 @@ const Metrics = require('./metrics')
 let metricWhitelist
 if (process.env.METRIC_WHITELIST) metricWhitelist = process.env.METRIC_WHITELIST.split(',').map(s => s.trim())
 
+let metricIdPrefix
+if (process.env.METRIC_ID_PREFIX) metricIdPrefix = process.env.METRIC_ID_PREFIX
+
 const app = express()
 
 app.engine('handlebars', exphbs({ defaultLayout: 'index' }))
@@ -38,7 +41,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/webhook', (req, res) => {
-  metrics = new Metrics({ payload: req.body, metricWhitelist: metricWhitelist })
+  metrics = new Metrics({ payload: req.body, metricWhitelist: metricWhitelist, metricIdPrefix: metricIdPrefix })
 
   metrics.datatables.forEach(dataset => {
     const { id, fields, values } = dataset
