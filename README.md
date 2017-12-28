@@ -7,7 +7,7 @@
 ### Tldr; setup guide
 
 * Get your [Geckoboard API key](https://app.geckoboard.com/account)
-* Deploy this app to Heroku [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/calibreapp/geckoboard)
+* Deploy this app to Heroku [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ahomu/geckoboard)
 * Visit the url of the heroku app you just deployed to find the webhook url (`<your-deployed-app>.herokuapp.com/webhook`)
 * For each site that you want to report metrics from, create a new webhook (Calibre→Site→Settings→Integrations) and paste in the `webhook URL`
 * You‘re done. Time to make the web fast. 🎉
@@ -64,7 +64,7 @@ Visit the [Geckoboard account details](https://app.geckoboard.com/account) page,
 
 Click this deploy button: 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/calibreapp/geckoboard)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ahomu/geckoboard)
 
 Name the application, something like `yourcompany-calibre-geckoboard`. 
 
