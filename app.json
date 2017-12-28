@@ -17,6 +17,10 @@
     "METRIC_WHITELIST": {
       "description": "Whitelist of metrics that should be sent to Geckoboard (See README.md for help)",
       "required": false
+    },
+    "METRIC_ID_PREFIX": {
+      "description": "Specify the id prefix of the data set to be posted",
+      "required": false
     }
   }
 }

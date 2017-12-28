@@ -7,6 +7,7 @@ module.exports = class Metrics {
   constructor(params = {}) {
     this.payload = params.payload
     this.metricWhitelist = params.metricWhitelist
+    this.metricIdPrefix = params.metricIdPrefix || 'calibre'
   }
 
   get datatables() {
@@ -17,7 +18,7 @@ module.exports = class Metrics {
     this.payload.pages.forEach(page => {
       page.metrics.map(metric => {
         const metricName = slugify(metric.name)
-        const id = `calibre.${metricName}`
+        const id = `${this.metricIdPrefix}.${metricName}`
 
         // Skip metrics that we aren't interested in
         if (this.metricWhitelist && !this.metricWhitelist.includes(metricName)) return

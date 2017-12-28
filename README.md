@@ -16,6 +16,7 @@
 
 * **GECKOBOARD_API_KEY** - The API key from your Geckoboard account
 * **METRIC_WHITELIST** - _(Optional configuration)_ Eg: `visually-complete,oncontentload` (Full list available below). 
+* **METRIC_ID_PREFIX** - _(Optional configuration)_ Specify the id prefix of the data set to be posted. Eg: `calibre-yourapp-prd`
 
 ---
 
